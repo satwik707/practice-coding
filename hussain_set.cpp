@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
+typedef long long ll;    //to use shortr form of long long
 int main()
 {
    int n,m;
@@ -10,10 +10,10 @@ int main()
    {
        cin>>arr[i];
    }
-   sort(arr,arr+n);
+   sort(arr,arr+n);        //sort
    int count_m=0;
    int end_p=n-1;
-   queue<ll>q;
+   queue<ll>q;         //queue
    int current_m;
    while(m--)
    {
@@ -22,7 +22,7 @@ int main()
        for(;count_m<current_m;count_m++)
        {
            
-           if( end_p>=0  && (arr[end_p]>=q.front()||q.empty()))
+           if( end_p>=0  && (arr[end_p]>=q.front()||q.empty()))            //conditions
            {
                ans=arr[end_p];
                end_p--;
