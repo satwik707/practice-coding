@@ -1,0 +1,18 @@
+int f(Node * node)
+{
+    if(node==NULL)
+    {
+        return 0;
+    }
+    int d=node->data;
+    int lsum=f(node->left);
+    int rsum=f(node->right);
+    node->data=lsum+rsum;
+    return d+node->data;
+}
+void toSumTree(Node *node)
+{
+    // Your code here
+    f(node);
+}
+
